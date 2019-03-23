@@ -5,7 +5,10 @@
 #ifndef BULLCOWGAME_MAIN_H
 #define BULLCOWGAME_MAIN_H
 
+#include <string>
+
 void printIntro();
 std::string getGuess();
+void playGame();
 
 #endif // BULLCOWGAME_MAIN_H
