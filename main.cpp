@@ -4,8 +4,10 @@
 using namespace std;
 
 int main() {
-  printIntro();
-  playGame();
+  do {
+    printIntro();
+    playGame();
+  } while (askToPlayAgain());
 
   return 0;
 }
@@ -36,8 +38,16 @@ void playGame() {
     string guess = getGuess();
 
     cout << "Your guess was: " << guess << endl;
-
-    if (count != NUMBER_OF_TURNS)
-      cout << endl;
+    cout << endl;
   }
+}
+
+bool askToPlayAgain() {
+  cout << "Do you want to play again? (y/n) ";
+
+  string response;
+
+  getline(cin, response);
+
+  return response[0] == 'y' || response[0] == 'Y';
 }

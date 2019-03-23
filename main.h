@@ -10,5 +10,6 @@
 void printIntro();
 std::string getGuess();
 void playGame();
+bool askToPlayAgain();
 
 #endif // BULLCOWGAME_MAIN_H
